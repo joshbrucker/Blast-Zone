@@ -33,7 +33,7 @@ public class PlayerController : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.Space))
             {
-                SceneManager.LoadScene("SampleScene");
+                SceneManager.LoadScene("MainGame");
             }
         }
     }
