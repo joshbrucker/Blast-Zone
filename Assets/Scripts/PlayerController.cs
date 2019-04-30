@@ -23,7 +23,7 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-        if (alive)
+        if (alive && PauseMenu.IsPaused == false)
         {
             CheckMovement();
             CheckDamage();
