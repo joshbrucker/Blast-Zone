@@ -1793,6 +1793,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 14d1fa51f812cfa4b82c59baa77af1f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  itemManager: {fileID: 0}
   visitedPrefab: {fileID: 8614533458670342104, guid: edd7d2202a4cc804a99af645e76d4da4,
     type: 3}
   invincTime: 3
@@ -2733,6 +2734,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pauseMenuUI: {fileID: 1235710694}
+  gameAudio: {fileID: 1753861300}
 --- !u!1 &1235710694
 GameObject:
   m_ObjectHideFlags: 0
@@ -3318,6 +3320,7 @@ GameObject:
   - component: {fileID: 1753861301}
   - component: {fileID: 1753861300}
   - component: {fileID: 1753861303}
+  - component: {fileID: 1753861304}
   m_Layer: 0
   m_Name: AudioObject Game
   m_TagString: Untagged
@@ -3463,6 +3466,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   volume: {fileID: 898557765}
   soundVolume: {fileID: 1753861301}
+--- !u!114 &1753861304
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1753861299}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9123697659351e445b2b3268d7690945, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  soundEffect: {fileID: 8300000, guid: 7a9d8bf1fdf304a449a7176300cd7eb8, type: 3}
+  musicSource: {fileID: 1753861301}
 --- !u!1 &1803002611
 GameObject:
   m_ObjectHideFlags: 0
