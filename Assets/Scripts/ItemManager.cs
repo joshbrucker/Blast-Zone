@@ -11,7 +11,8 @@ public class ItemManager : MonoBehaviour
     public GameObject smallBomb;
     public GameObject largeBomb;
 
-    public int strongChance = 75;
+    public int strongChance = 99;
+    public int completions = 0;
 
     float timeToNext = 2;
     bool onCooldown = false;
@@ -32,6 +33,12 @@ public class ItemManager : MonoBehaviour
 
         if (player.GetComponent<PlayerController>().alive)
         {
+            if (Grid.Completed())
+            {
+                Debug.Log("we made it to ID CALL");
+                completions++;
+                IncreaseDifficulty();
+            }
             if (!onCooldown)
             {
                 DropExplosive();
@@ -50,10 +57,10 @@ public class ItemManager : MonoBehaviour
         {
             if (!cleanupFinished)
             {
+                strongChance = 99;
                 CleanupExplosives();
             }
         }
-
     }
 
     public void CleanupExplosives()
@@ -126,14 +133,16 @@ public class ItemManager : MonoBehaviour
         }
     }
 
-    /*
-    public static int getStrongChance()
+   
+    void IncreaseDifficulty()
     {
-        return ItemManager.strongChance;
+        if (Grid.Completed())
+        {
+            strongChance -= 2 * completions;
+            Debug.Log("Difficulty increased by: " + completions * 2);
+            Debug.Log("strongChance value: " + strongChance);
+        }
+        
     }
 
-    public static void setStrongChance(int sc)
-    {
-        strongChance = sc;
-    }*/
 }

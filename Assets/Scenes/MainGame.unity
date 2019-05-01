@@ -1158,7 +1158,8 @@ MonoBehaviour:
     type: 3}
   largeBomb: {fileID: 8683454978624686013, guid: 82dfcda95a590c04db92c5e8802c62dc,
     type: 3}
-  strongChance: 75
+  strongChance: 99
+  completions: 0
 --- !u!1 &579285814
 GameObject:
   m_ObjectHideFlags: 0
