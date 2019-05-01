@@ -53,6 +53,7 @@ public class ItemManager : MonoBehaviour
                 CleanupExplosives();
             }
         }
+
     }
 
     public void CleanupExplosives()
@@ -124,4 +125,15 @@ public class ItemManager : MonoBehaviour
             node.currentObj = explosive;
         }
     }
+
+    /*
+    public static int getStrongChance()
+    {
+        return ItemManager.strongChance;
+    }
+
+    public static void setStrongChance(int sc)
+    {
+        strongChance = sc;
+    }*/
 }
