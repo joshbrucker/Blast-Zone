@@ -17,11 +17,12 @@ public class PauseMenu : MonoBehaviour
             if (IsPaused == true)
             {
                 Resume();
-                gameAudio.PauseAudio();
+                gameAudio.PlayAudio();
             }
             else
             {
                 Pause();
+                gameAudio.PauseAudio();
             }
         }
     }
