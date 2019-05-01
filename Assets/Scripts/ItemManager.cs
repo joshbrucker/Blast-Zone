@@ -33,12 +33,6 @@ public class ItemManager : MonoBehaviour
 
         if (player.GetComponent<PlayerController>().alive)
         {
-            if (Grid.Completed())
-            {
-                Debug.Log("we made it to ID CALL");
-                completions++;
-                IncreaseDifficulty();
-            }
             if (!onCooldown)
             {
                 DropExplosive();
@@ -134,7 +128,7 @@ public class ItemManager : MonoBehaviour
     }
 
    
-    void IncreaseDifficulty()
+    public void IncreaseDifficulty()
     {
         if (Grid.Completed())
         {

@@ -20,4 +20,14 @@ public class GameAudio : MonoBehaviour
     {
 
     }
+
+    public void PauseAudio()
+    {
+        musicSource.Pause();
+    }
+
+    public void PlayAudio()
+    {
+        musicSource.Play();
+    }
 }

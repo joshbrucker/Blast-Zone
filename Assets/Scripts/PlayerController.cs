@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    public ItemManager itemManager;
     public GameObject visitedPrefab;
     public int invincTime = 3;
 
@@ -25,9 +26,16 @@ public class PlayerController : MonoBehaviour
     {
         if (alive && PauseMenu.IsPaused == false)
         {
+            if (Grid.Completed())
+            {
+                Debug.Log("we made it to ID CALL");
+                itemManager.completions++;
+                itemManager.IncreaseDifficulty();
+            }
             CheckMovement();
             CheckDamage();
             CheckVisited();
+         
         }
         else
         {
