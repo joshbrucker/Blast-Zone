@@ -17,7 +17,7 @@ public class PauseMenu : MonoBehaviour
             if (IsPaused == true)
             {
                 Resume();
-                //gameAudio.PauseAudio;
+                gameAudio.PauseAudio();
             }
             else
             {
