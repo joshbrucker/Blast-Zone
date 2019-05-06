@@ -26,12 +26,6 @@ public class PlayerController : MonoBehaviour
     {
         if (alive && PauseMenu.IsPaused == false)
         {
-            if (Grid.Completed())
-            {
-                Debug.Log("we made it to ID CALL");
-                itemManager.completions++;
-                itemManager.IncreaseDifficulty();
-            }
             CheckMovement();
             CheckDamage();
             CheckVisited();
@@ -106,6 +100,12 @@ public class PlayerController : MonoBehaviour
                 transform.position += new Vector3(0, -1, 0);
                 x++;
             }
+        }
+
+        //implemented to help with difficulty testing
+        if (Input.GetKeyDown(KeyCode.H))
+        {
+            Grid.ClearVisited();
         }
     }
 }

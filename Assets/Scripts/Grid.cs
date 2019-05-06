@@ -49,6 +49,23 @@ public static class Grid
     // Removes visited objects and reset all nodes to be unvisited
     public static void ClearVisited()
     {
+        //increasing the difficulty on completion
+        ItemManager.completions++;
+        if (ItemManager.completions < 10 && ItemManager.strongChance>10)
+        {
+            ItemManager.strongChance -= (2 * ItemManager.completions);
+            Debug.Log("Grid Call Strong Chance Reached");
+            Debug.Log(ItemManager.strongChance);
+            Debug.Log(ItemManager.completions);
+        }
+        else
+        {
+            ItemManager.strongChance = 10;
+            Debug.Log(ItemManager.strongChance);
+            Debug.Log(ItemManager.completions);
+        }
+       
+        
         foreach (GameObject visited in visitedObjs)
         {
             Object.Destroy(visited);
@@ -63,6 +80,8 @@ public static class Grid
                 grid[i, j].visited = false;
             }
         }
+
+
     }
 }
 

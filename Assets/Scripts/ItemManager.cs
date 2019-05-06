@@ -11,8 +11,8 @@ public class ItemManager : MonoBehaviour
     public GameObject smallBomb;
     public GameObject largeBomb;
 
-    public int strongChance = 99;
-    public int completions = 0;
+    public static int strongChance = 99;
+    public static int completions = 0;
 
     float timeToNext = 2;
     bool onCooldown = false;
@@ -30,7 +30,6 @@ public class ItemManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
         if (player.GetComponent<PlayerController>().alive)
         {
             if (!onCooldown)
@@ -49,9 +48,9 @@ public class ItemManager : MonoBehaviour
         }
         else
         {
+            strongChance = 99;
             if (!cleanupFinished)
             {
-                strongChance = 99;
                 CleanupExplosives();
             }
         }
