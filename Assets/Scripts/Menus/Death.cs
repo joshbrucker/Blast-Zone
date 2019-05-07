@@ -44,6 +44,7 @@ public class Death : MonoBehaviour
 
     public void QuitMenu()
     {
+
         Utilities.ResetSettings();
         SceneManager.LoadScene("MenuScene");
     }

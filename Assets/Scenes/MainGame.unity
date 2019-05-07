@@ -1194,28 +1194,12 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -6.5, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 0.78, z: 1}
-  m_Children:
-  - {fileID: 292288917}
-  - {fileID: 109608082}
-  - {fileID: 298814513}
-  - {fileID: 696016673}
-  - {fileID: 1261213312}
-  - {fileID: 106012059}
-  - {fileID: 1916885413}
-  - {fileID: 182708785}
-  - {fileID: 856500835}
-  - {fileID: 621313587}
-  - {fileID: 1350297418}
-  - {fileID: 246415628}
-  - {fileID: 1803002613}
-  - {fileID: 1158456493}
-  - {fileID: 1276379289}
-  - {fileID: 1349955910}
-  - {fileID: 2119255452}
-  - {fileID: 216507793}
-  - {fileID: 102593498}
-  - {fileID: 1820818919}
-  - {fileID: 1163402347}
+  m_Children: [{fileID: 292288917}, {fileID: 109608082}, {fileID: 298814513}, {fileID: 696016673},
+    {fileID: 1261213312}, {fileID: 106012059}, {fileID: 1916885413}, {fileID: 182708785},
+    {fileID: 856500835}, {fileID: 621313587}, {fileID: 1350297418}, {fileID: 246415628},
+    {fileID: 1803002613}, {fileID: 1158456493}, {fileID: 1276379289}, {fileID: 1349955910},
+    {fileID: 2119255452}, {fileID: 216507793}, {fileID: 102593498}, {fileID: 1820818919},
+    {fileID: 1163402347}]
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3538,12 +3522,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   soundEffect: {fileID: 8300000, guid: 414da5e6057e717438c51749fd157928, type: 3}
   musicSource: {fileID: 1753861301}
-  LevelSong1: {fileID: 8300000, guid: 7a9d8bf1fdf304a449a7176300cd7eb8, type: 3}
+  LevelSong1: {fileID: 8300000, guid: 414da5e6057e717438c51749fd157928, type: 3}
   LevelSong2: {fileID: 8300000, guid: c2c353a7dd835ba4e84edc9478fbdf5f, type: 3}
   LevelSong3: {fileID: 8300000, guid: 4011a77c401cc6944a2ee65cc1e9beb4, type: 3}
-  LevelSong4: {fileID: 8300000, guid: 6d16048736e01cf49a4cdf7d15766491, type: 3}
-  LevelSong5: {fileID: 0}
-  LevelSong6: {fileID: 0}
+  LevelSong4: {fileID: 8300000, guid: 7a9d8bf1fdf304a449a7176300cd7eb8, type: 3}
+  LevelSong5: {fileID: 8300000, guid: 6d16048736e01cf49a4cdf7d15766491, type: 3}
+  LevelSong6: {fileID: 8300000, guid: 9c4e90a6380b26a4a9beb07c46123dba, type: 3}
   LevelSong7: {fileID: 0}
   LevelSong8: {fileID: 0}
   LevelSong9: {fileID: 0}
