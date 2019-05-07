@@ -7,6 +7,9 @@ public class PlayerController : MonoBehaviour
 {
     public ItemManager itemManager;
     public GameObject visitedPrefab;
+    public Sprite upSprite;
+    public Sprite leftSprite;
+    public Sprite rightSprite;
     public int invincTime = 3;
 
     public bool alive { get; set; }
@@ -39,7 +42,7 @@ public class PlayerController : MonoBehaviour
         if (!node.visited)
         {
             node.visited = true;
-            GameObject visitedObj = Instantiate(visitedPrefab, transform.position, transform.rotation);
+            GameObject visitedObj = Instantiate(visitedPrefab, new Vector3(y - 6, 3 - x, 0), transform.rotation);
             Grid.Visit(visitedObj);
 
             if (Grid.Completed())
@@ -65,6 +68,7 @@ public class PlayerController : MonoBehaviour
         {
             if (y + 1 < grid.GetLength(1))
             {
+                gameObject.GetComponent<SpriteRenderer>().sprite = rightSprite;
                 transform.position += new Vector3(1, 0, 0);
                 y++;
             }
@@ -73,6 +77,7 @@ public class PlayerController : MonoBehaviour
         {
             if (y - 1 >= 0)
             {
+                gameObject.GetComponent<SpriteRenderer>().sprite = leftSprite;
                 transform.position += new Vector3(-1, 0, 0);
                 y--;
             }
@@ -81,6 +86,7 @@ public class PlayerController : MonoBehaviour
         {
             if (x - 1 >= 0)
             {
+                gameObject.GetComponent<SpriteRenderer>().sprite = upSprite;
                 transform.position += new Vector3(0, 1, 0);
                 x--;
             }
@@ -89,6 +95,7 @@ public class PlayerController : MonoBehaviour
         {
             if (x + 1 < grid.GetLength(0))
             {
+                gameObject.GetComponent<SpriteRenderer>().sprite = rightSprite;
                 transform.position += new Vector3(0, -1, 0);
                 x++;
             }
