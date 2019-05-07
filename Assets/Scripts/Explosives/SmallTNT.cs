@@ -32,12 +32,7 @@ public class SmallTNT : MonoBehaviour, Explosive
     // Triggers explosions across close diagonals
     public void Explode()
     {
-        foreach (GameObject warning in warnings)
-        {
-            Destroy(warning);
-        }
-
-        warnings.Clear();
+        ClearWarnings();
 
         for (int i = -1; i <= 1; i++)
         {
@@ -84,6 +79,23 @@ public class SmallTNT : MonoBehaviour, Explosive
                 }
             }
         }
+    }
+
+    public void ClearWarnings()
+    {
+        foreach (GameObject warning in warnings)
+        {
+            Destroy(warning);
+        }
+
+        warnings.Clear();
+    }
+
+    public void Kill()
+    {
+        CancelInvoke();
+        ClearWarnings();
+        Destroy(gameObject);
     }
 
     // Immediately sets explosive into primed mode

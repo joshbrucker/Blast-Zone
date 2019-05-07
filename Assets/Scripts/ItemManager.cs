@@ -52,28 +52,9 @@ public class ItemManager : MonoBehaviour
             completions = 0;
             if (!cleanupFinished)
             {
-                CleanupExplosives();
+                Utilities.CleanupExplosives(true);
+                cleanupFinished = true;
             }
-        }
-    }
-
-    public void CleanupExplosives()
-    {
-        {
-            for (int i = 0; i < grid.GetLength(0); i++)
-            {
-                for (int j = 0; j < grid.GetLength(1); j++)
-                {
-                    Node node = grid[i, j];
-                    if (node.IsOccupied() && node.currentObj.GetComponent<Explosive>() != null
-                        && !node.currentObj.GetComponent<Explosive>().primed)
-                    {
-                        node.currentObj.GetComponent<Explosive>().ChainExplode();
-                    }
-                }
-            }
-
-            cleanupFinished = true;
         }
     }
 
@@ -133,8 +114,6 @@ public class ItemManager : MonoBehaviour
         if (Grid.Completed())
         {
             strongChance -= 2 * completions;
-            Debug.Log("Difficulty increased by: " + completions * 2);
-            Debug.Log("strongChance value: " + strongChance);
         }
         
     }

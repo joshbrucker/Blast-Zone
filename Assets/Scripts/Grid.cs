@@ -56,15 +56,10 @@ public static class Grid
         if (ItemManager.completions < 10 && ItemManager.strongChance>10)
         {
             ItemManager.strongChance -= (2 * ItemManager.completions);
-            Debug.Log("Grid Call Strong Chance Reached");
-            Debug.Log(ItemManager.strongChance);
-            Debug.Log(ItemManager.completions);
         }
         else
         {
             ItemManager.strongChance = 10;
-            Debug.Log(ItemManager.strongChance);
-            Debug.Log(ItemManager.completions);
         }
        
         

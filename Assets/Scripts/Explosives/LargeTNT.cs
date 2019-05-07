@@ -32,12 +32,7 @@ public class LargeTNT : MonoBehaviour, Explosive
     // Triggers explosions across diagonals
     public void Explode()
     {
-        foreach (GameObject warning in warnings)
-        {
-            Destroy(warning);
-        }
-
-        warnings.Clear();
+        ClearWarnings();
 
         SetExplosion(x, y);
 
@@ -119,6 +114,23 @@ public class LargeTNT : MonoBehaviour, Explosive
         Node node = grid[i, j];
         GameObject warning = Instantiate(warningPrefab, new Vector3(j - 6, 3 - i, 0), transform.rotation);
         warnings.Add(warning);
+    }
+
+    public void ClearWarnings()
+    {
+        foreach (GameObject warning in warnings)
+        {
+            Destroy(warning);
+        }
+
+        warnings.Clear();
+    }
+
+    public void Kill()
+    {
+        CancelInvoke();
+        ClearWarnings();
+        Destroy(gameObject);
     }
 
     // Immediately sets explosive into primed mode

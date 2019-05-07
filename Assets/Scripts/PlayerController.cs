@@ -47,6 +47,7 @@ public class PlayerController : MonoBehaviour
 
             if (Grid.Completed())
             {
+                Utilities.CleanupExplosives(false);
                 Grid.ClearVisited();
             }
         }

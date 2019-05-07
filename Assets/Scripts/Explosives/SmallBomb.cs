@@ -32,12 +32,7 @@ public class SmallBomb : MonoBehaviour, Explosive
     // Triggers explosions across closs horizontal/vertical
     public void Explode()
     {
-        foreach (GameObject warning in warnings)
-        {
-            Destroy(warning);
-        }
-
-        warnings.Clear();
+        ClearWarnings();
 
         SetExplosion(0, 0);
 
@@ -100,6 +95,23 @@ public class SmallBomb : MonoBehaviour, Explosive
         Node node = grid[x + i, y + j];
         GameObject warning = Instantiate(warningPrefab, transform.position + new Vector3(j, -i, 0), transform.rotation);
         warnings.Add(warning);
+    }
+
+    public void ClearWarnings()
+    {
+        foreach (GameObject warning in warnings)
+        {
+            Destroy(warning);
+        }
+
+        warnings.Clear();
+    }
+
+    public void Kill()
+    {
+        CancelInvoke();
+        ClearWarnings();
+        Destroy(gameObject);
     }
 
     // Immediately sets explosive into primed mode

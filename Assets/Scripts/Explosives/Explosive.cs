@@ -11,6 +11,7 @@ using UnityEngine;
 interface Explosive
 {
     bool primed { get; set; }
+    void Kill();
     void Explode();
     void ChainExplode();
 }
