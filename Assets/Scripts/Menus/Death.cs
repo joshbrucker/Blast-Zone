@@ -38,6 +38,7 @@ public class Death : MonoBehaviour
 
     public void Restart()
     {
+        Grid.visitedCounter = 0;
         SceneManager.LoadScene("MainGame");
     }
 
