@@ -18,6 +18,8 @@ public class GameAudio : MonoBehaviour
     public AudioClip LevelSong8;
     public AudioClip LevelSong9;
     public AudioClip LevelSong10;
+
+    int lastLevel = ItemManager.completions;
     
 
     // Start is called before the first frame update
@@ -31,6 +33,12 @@ public class GameAudio : MonoBehaviour
     void Update()
     {
 
+        
+        if(ItemManager.completions != lastLevel)
+        {
+            PlaySongByLevel();
+        }
+        lastLevel = ItemManager.completions;
     }
 
     public void PauseAudio()
@@ -47,7 +55,18 @@ public class GameAudio : MonoBehaviour
     {
         if(ItemManager.completions == 1)
         {
-            musicSource.clip = soundEffect;
+            musicSource.clip = LevelSong1;
+            musicSource.Play();
+        }
+        else if(ItemManager.completions == 2)
+        {
+            musicSource.clip = LevelSong2;
+            musicSource.Play();
+        }
+        else if (ItemManager.completions == 3)
+        {
+            musicSource.clip = LevelSong3;
+            musicSource.Play();
         }
     }
 

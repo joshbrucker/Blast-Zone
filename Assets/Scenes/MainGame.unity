@@ -3318,7 +3318,6 @@ GameObject:
   - component: {fileID: 1753861301}
   - component: {fileID: 1753861300}
   - component: {fileID: 1753861303}
-  - component: {fileID: 1753861304}
   m_Layer: 0
   m_Name: AudioObject Game
   m_TagString: Untagged
@@ -3338,9 +3337,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9123697659351e445b2b3268d7690945, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  soundEffect: {fileID: 8300000, guid: 7a9d8bf1fdf304a449a7176300cd7eb8, type: 3}
+  soundEffect: {fileID: 8300000, guid: 414da5e6057e717438c51749fd157928, type: 3}
   musicSource: {fileID: 1753861301}
-  LevelSong1: {fileID: 8300000, guid: 414da5e6057e717438c51749fd157928, type: 3}
+  LevelSong1: {fileID: 8300000, guid: 7a9d8bf1fdf304a449a7176300cd7eb8, type: 3}
   LevelSong2: {fileID: 8300000, guid: c2c353a7dd835ba4e84edc9478fbdf5f, type: 3}
   LevelSong3: {fileID: 0}
   LevelSong4: {fileID: 0}
@@ -3350,6 +3349,7 @@ MonoBehaviour:
   LevelSong8: {fileID: 0}
   LevelSong9: {fileID: 0}
   LevelSong10: {fileID: 0}
+  lastLevel: 0
 --- !u!82 &1753861301
 AudioSource:
   m_ObjectHideFlags: 0
@@ -3474,30 +3474,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   volume: {fileID: 898557765}
   soundVolume: {fileID: 1753861301}
---- !u!114 &1753861304
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1753861299}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9123697659351e445b2b3268d7690945, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  soundEffect: {fileID: 8300000, guid: 7a9d8bf1fdf304a449a7176300cd7eb8, type: 3}
-  musicSource: {fileID: 1753861301}
-  LevelSong1: {fileID: 0}
-  LevelSong2: {fileID: 0}
-  LevelSong3: {fileID: 0}
-  LevelSong4: {fileID: 0}
-  LevelSong5: {fileID: 0}
-  LevelSong6: {fileID: 0}
-  LevelSong7: {fileID: 0}
-  LevelSong8: {fileID: 0}
-  LevelSong9: {fileID: 0}
-  LevelSong10: {fileID: 0}
 --- !u!1 &1803002611
 GameObject:
   m_ObjectHideFlags: 0
