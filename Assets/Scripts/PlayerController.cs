@@ -29,12 +29,13 @@ public class PlayerController : MonoBehaviour
             CheckMovement();
             CheckDamage();
             CheckVisited();
-         
         }
         else
         {
             if (Input.GetKeyDown(KeyCode.Space))
             {
+                ItemManager.strongChance = 99;
+                ItemManager.completions = 0;
                 SceneManager.LoadScene("MainGame");
             }
         }
