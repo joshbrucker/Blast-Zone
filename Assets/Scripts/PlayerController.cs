@@ -30,16 +30,6 @@ public class PlayerController : MonoBehaviour
             CheckDamage();
             CheckVisited();
         }
-        else
-        {
-            if (Input.GetKeyDown(KeyCode.Space))
-            {
-                ItemManager.strongChance = 99;
-                ItemManager.completions = 0;
-                Grid.ResetVisitedCounter();
-                SceneManager.LoadScene("MainGame");
-            }
-        }
     }
 
     // Checks if the player's space has been visited; if not, set to visited.

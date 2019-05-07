@@ -38,14 +38,14 @@ public class Death : MonoBehaviour
 
     public void Restart()
     {
-        Grid.visitedCounter = 0;
+        Utilities.ResetSettings();
         SceneManager.LoadScene("MainGame");
     }
 
     public void QuitMenu()
     {
-        Debug.Log("QUIT");
-        Grid.ClearVisited();
-        Application.Quit();
+
+        Utilities.ResetSettings();
+        SceneManager.LoadScene("MenuScene");
     }
 }
