@@ -1,10 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameAudio : MonoBehaviour
 {
     public AudioSource musicSource;
+
+
+    public GameObject musicSlider;
 
     public AudioClip LevelSong1;
     public AudioClip LevelSong2;
@@ -40,6 +44,8 @@ public class GameAudio : MonoBehaviour
         songList[7] = LevelSong8;
         songList[8] = LevelSong9;
         songList[9] = LevelSong10;
+
+        OnSceneLoaded(SceneManager.GetSceneByName("MainGame"), LoadSceneMode.Additive);
     }
 
     // Update is called once per frame
@@ -122,5 +128,10 @@ public class GameAudio : MonoBehaviour
         }
 
         shouldReplay = true;
+    }
+
+    void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        musicSlider = GameObject.FindWithTag("slider");
     }
 }
