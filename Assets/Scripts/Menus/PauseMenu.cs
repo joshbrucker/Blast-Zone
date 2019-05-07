@@ -43,6 +43,7 @@ public class PauseMenu : MonoBehaviour
 
     public void LoadMenu()
     {
+        Utilities.ResetSettings();
         Time.timeScale = 1f;
         IsPaused = false;
         SceneManager.LoadScene("MenuScene");
