@@ -133,7 +133,7 @@ GameObject:
   - component: {fileID: 70066935}
   m_Layer: 0
   m_Name: Music Audio Source New Scene
-  m_TagString: Untagged
+  m_TagString: Music
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -151,6 +151,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   musicSource: {fileID: 70066936}
+  musicSlider: {fileID: 0}
   LevelSong1: {fileID: 8300000, guid: 414da5e6057e717438c51749fd157928, type: 3}
   LevelSong2: {fileID: 8300000, guid: c2c353a7dd835ba4e84edc9478fbdf5f, type: 3}
   LevelSong3: {fileID: 8300000, guid: 4011a77c401cc6944a2ee65cc1e9beb4, type: 3}
@@ -173,7 +174,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.126
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -304,7 +305,7 @@ Camera:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 469322019}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_ClearFlags: 1
   m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
