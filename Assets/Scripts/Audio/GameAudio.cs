@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class GameAudio : MonoBehaviour
 {
-    public AudioClip soundEffect;
-
     public AudioSource musicSource;
 
     public AudioClip LevelSong1;
@@ -20,25 +18,45 @@ public class GameAudio : MonoBehaviour
     public AudioClip LevelSong10;
 
     int lastLevel = ItemManager.completions;
-    
+
+    AudioClip[] songList = new AudioClip[100];
+
+    private bool shouldReplay = true;
 
     // Start is called before the first frame update
     void Start()
     {
-        musicSource.clip = soundEffect;
-        musicSource.Play();
+        //SetSongList();
+        //musicSource.clip = soundEffect;
+        //musicSource.Play();
+
+        songList[0] = LevelSong1;
+        songList[1] = LevelSong2;
+        songList[2] = LevelSong3;
+        songList[3] = LevelSong4;
+        songList[4] = LevelSong5;
+        songList[5] = LevelSong6;
+        songList[6] = LevelSong7;
+        songList[7] = LevelSong8;
+        songList[8] = LevelSong9;
+        songList[9] = LevelSong10;
     }
 
     // Update is called once per frame
     void Update()
     {
 
-        
-        if(ItemManager.completions != lastLevel)
+        /*  if(ItemManager.completions != lastLevel)
+          {
+              PlaySongByLevel();
+          }
+          lastLevel = ItemManager.completions;*/
+
+        if (shouldReplay)
         {
-            PlaySongByLevel();
-        }
-        lastLevel = ItemManager.completions;
+            PlaySongList();
+            shouldReplay = false;
+        } 
     }
 
     public void PauseAudio()
@@ -70,5 +88,39 @@ public class GameAudio : MonoBehaviour
         }
     }
 
-    
+    void SetSongList()
+    {
+        // songList = { LevelSong1, LevelSong2, LevelSong3, LevelSong4, LevelSong5, LevelSong6,
+        //     LevelSong7, LevelSong8, LevelSong9, LevelSong10 };
+
+
+    }
+
+
+
+    void PlaySongList()
+    {
+        /*
+          musicSource.clip = songList[i];
+          musicSource.Play();
+          yield return new WaitForSeconds(musicSource.clip.length)*/
+
+        int infiniteVal = 0;
+
+        while (infiniteVal >= 0 && infiniteVal<10)
+        {
+            for (int i = 0; i < songList.Length; i++)
+            {
+                if (songList[i] != null)
+                {
+                    musicSource.clip = songList[i];
+                    musicSource.Play();
+                    new WaitForSeconds(musicSource.clip.length);
+                }
+            }
+            infiniteVal++;
+        }
+
+        shouldReplay = true;
+    }
 }

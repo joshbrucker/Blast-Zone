@@ -45,6 +45,7 @@ public class Death : MonoBehaviour
     public void QuitMenu()
     {
         Debug.Log("QUIT");
+        Grid.ClearVisited();
         Application.Quit();
     }
 }
