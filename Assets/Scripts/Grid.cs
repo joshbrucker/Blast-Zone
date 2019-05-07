@@ -12,6 +12,7 @@ public static class Grid
 {
     public static Node[,] grid;
     public static List<GameObject> visitedObjs;
+    public static int visitedCounter = 0;
 
     // Initializes the grid
     public static void Initialize()
@@ -44,6 +45,7 @@ public static class Grid
     public static void Visit(GameObject visitedObj)
     {
         visitedObjs.Add(visitedObj);
+        visitedCounter++;
     }
 
     // Removes visited objects and reset all nodes to be unvisited
@@ -82,6 +84,11 @@ public static class Grid
         }
 
 
+    }
+
+    public static void ResetVisitedCounter()
+    {
+        visitedCounter = 0;
     }
 }
 

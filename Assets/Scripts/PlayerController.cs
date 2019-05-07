@@ -36,6 +36,7 @@ public class PlayerController : MonoBehaviour
             {
                 ItemManager.strongChance = 99;
                 ItemManager.completions = 0;
+                Grid.ResetVisitedCounter();
                 SceneManager.LoadScene("MainGame");
             }
         }
