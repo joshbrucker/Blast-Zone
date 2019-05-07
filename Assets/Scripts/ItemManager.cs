@@ -49,6 +49,7 @@ public class ItemManager : MonoBehaviour
         else
         {
             strongChance = 99;
+            completions = 0;
             if (!cleanupFinished)
             {
                 CleanupExplosives();
