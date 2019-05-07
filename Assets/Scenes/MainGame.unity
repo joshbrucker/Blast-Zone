@@ -1194,12 +1194,28 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -6.5, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 0.78, z: 1}
-  m_Children: [{fileID: 292288917}, {fileID: 109608082}, {fileID: 298814513}, {fileID: 696016673},
-    {fileID: 1261213312}, {fileID: 106012059}, {fileID: 1916885413}, {fileID: 182708785},
-    {fileID: 856500835}, {fileID: 621313587}, {fileID: 1350297418}, {fileID: 246415628},
-    {fileID: 1803002613}, {fileID: 1158456493}, {fileID: 1276379289}, {fileID: 1349955910},
-    {fileID: 2119255452}, {fileID: 216507793}, {fileID: 102593498}, {fileID: 1820818919},
-    {fileID: 1163402347}]
+  m_Children:
+  - {fileID: 292288917}
+  - {fileID: 109608082}
+  - {fileID: 298814513}
+  - {fileID: 696016673}
+  - {fileID: 1261213312}
+  - {fileID: 106012059}
+  - {fileID: 1916885413}
+  - {fileID: 182708785}
+  - {fileID: 856500835}
+  - {fileID: 621313587}
+  - {fileID: 1350297418}
+  - {fileID: 246415628}
+  - {fileID: 1803002613}
+  - {fileID: 1158456493}
+  - {fileID: 1276379289}
+  - {fileID: 1349955910}
+  - {fileID: 2119255452}
+  - {fileID: 216507793}
+  - {fileID: 102593498}
+  - {fileID: 1820818919}
+  - {fileID: 1163402347}
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1917,7 +1933,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: 06225dcf6a0f98b44a096dcbe0d049ee, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 546bd6262818da5468905e9323bf52f7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1936,8 +1952,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 788365704}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6, y: -3, z: 0}
-  m_LocalScale: {x: 0.62868804, y: 0.62868804, z: 0.78586}
+  m_LocalPosition: {x: -5.953, y: -2.906, z: 0}
+  m_LocalScale: {x: 0.26448676, y: 0.26448676, z: 0.33060843}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 2
@@ -1957,6 +1973,9 @@ MonoBehaviour:
   itemManager: {fileID: 0}
   visitedPrefab: {fileID: 8614533458670342104, guid: edd7d2202a4cc804a99af645e76d4da4,
     type: 3}
+  upSprite: {fileID: 21300000, guid: 8f81bd701bda82a4ab3259859dd8ff03, type: 3}
+  leftSprite: {fileID: 21300000, guid: 4827696713cd607459747e3f220334ff, type: 3}
+  rightSprite: {fileID: 21300000, guid: 546bd6262818da5468905e9323bf52f7, type: 3}
   invincTime: 3
 --- !u!1 &856500833
 GameObject:
@@ -3520,7 +3539,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9123697659351e445b2b3268d7690945, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  soundEffect: {fileID: 8300000, guid: 414da5e6057e717438c51749fd157928, type: 3}
   musicSource: {fileID: 1753861301}
   LevelSong1: {fileID: 8300000, guid: 414da5e6057e717438c51749fd157928, type: 3}
   LevelSong2: {fileID: 8300000, guid: c2c353a7dd835ba4e84edc9478fbdf5f, type: 3}
