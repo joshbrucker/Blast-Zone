@@ -85,7 +85,10 @@ public class SmallTNT : MonoBehaviour, Explosive
     {
         foreach (GameObject warning in warnings)
         {
-            Destroy(warning);
+            if (warning != null)
+            {
+                Destroy(warning);
+            }
         }
 
         warnings.Clear();
