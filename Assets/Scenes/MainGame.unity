@@ -2365,6 +2365,7 @@ GameObject:
   - component: {fileID: 987536748}
   - component: {fileID: 987536747}
   - component: {fileID: 987536746}
+  - component: {fileID: 987536749}
   m_Layer: 5
   m_Name: Resume Button
   m_TagString: Untagged
@@ -2485,6 +2486,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 987536744}
   m_CullTransparentMesh: 0
+--- !u!114 &987536749
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 987536744}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1862395651, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls: []
+      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
+        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
 --- !u!1 &1049999260
 GameObject:
   m_ObjectHideFlags: 0
