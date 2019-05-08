@@ -96,7 +96,10 @@ public class PlayerController : MonoBehaviour
         {
             if (x + 1 < grid.GetLength(0))
             {
-                gameObject.GetComponent<SpriteRenderer>().sprite = rightSprite;
+                if (gameObject.GetComponent<SpriteRenderer>().sprite != leftSprite)
+                {
+                    gameObject.GetComponent<SpriteRenderer>().sprite = rightSprite;
+                }
                 transform.position += new Vector3(0, -1, 0);
                 x++;
             }
