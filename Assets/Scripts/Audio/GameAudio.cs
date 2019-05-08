@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class GameAudio : MonoBehaviour
 {
-
+    private static GameAudio instance = null;
 
     public Slider volume;
     public AudioSource musicSource;
@@ -31,6 +31,12 @@ public class GameAudio : MonoBehaviour
 
     private void Awake()
     {
+        if (instance != null && instance != this) {
+            Destroy(this.gameObject);
+            return;
+        } else {
+            instance = this;
+        }
         DontDestroyOnLoad(this.gameObject);
     }
 
@@ -72,7 +78,7 @@ public class GameAudio : MonoBehaviour
             shouldReplay = false;
         } 
 
-        musicSource.volume = volume.value;
+        //musicSource.volume = volume.value;
     }
 
     public void PauseAudio()
@@ -139,5 +145,10 @@ public class GameAudio : MonoBehaviour
         }
 
         shouldReplay = true;
+    }
+
+    public static GameAudio Instance
+    {
+        get { return instance; }
     }
 }

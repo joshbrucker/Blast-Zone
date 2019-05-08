@@ -2067,7 +2067,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &898557764
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2423,7 +2423,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1049999261
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3463,7 +3463,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   volume: {fileID: 898557765}
   musicSource: {fileID: 1753861301}
-  musicSlider: {fileID: 0}
   LevelSong1: {fileID: 8300000, guid: 414da5e6057e717438c51749fd157928, type: 3}
   LevelSong2: {fileID: 8300000, guid: c2c353a7dd835ba4e84edc9478fbdf5f, type: 3}
   LevelSong3: {fileID: 8300000, guid: 4011a77c401cc6944a2ee65cc1e9beb4, type: 3}
