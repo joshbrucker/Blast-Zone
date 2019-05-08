@@ -99,11 +99,11 @@ public class SmallBomb : MonoBehaviour, Explosive
 
     public void ClearWarnings()
     {
-        foreach (GameObject warning in warnings)
+        foreach (Object warning in warnings)
         {
-            if (warning != null)
+            if (warning is GameObject)
             {
-                Destroy(warning);
+                Destroy((GameObject)warning);
             }
         }
 
