@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Start Menu Gradiant
   m_EditorClassIdentifier: 
   colorMode: 3
-  topLeft: {r: 0.9433962, g: 0.9433962, b: 0.9433962, a: 1}
-  topRight: {r: 0.94509804, g: 0.94509804, b: 0.94509804, a: 1}
-  bottomLeft: {r: 1, g: 0.9764706, b: 0.9764706, a: 1}
-  bottomRight: {r: 1, g: 0.9764151, b: 0.9764151, a: 1}
+  topLeft: {r: 0.13777146, g: 0.6792453, b: 0.37957042, a: 1}
+  topRight: {r: 0.14117648, g: 0.68235296, b: 0.38039216, a: 1}
+  bottomLeft: {r: 0.14117648, g: 0.68235296, b: 0.38039216, a: 1}
+  bottomRight: {r: 0.14117648, g: 0.68235296, b: 0.38039216, a: 1}
