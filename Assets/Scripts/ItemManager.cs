@@ -113,17 +113,7 @@ public class ItemManager : MonoBehaviour
     {
         if (Grid.Completed())
         {
-            if (strongChance != 50)
-            {
-                if (strongChance - 3 * completions <= 50)
-                {
-                    strongChance = 50;
-                }
-                else
-                {
-                    strongChance -= 3 * completions;
-                }
-            }
+            strongChance -= 2 * completions;
         }
         
     }
