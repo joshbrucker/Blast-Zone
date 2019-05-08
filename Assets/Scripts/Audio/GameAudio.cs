@@ -1,14 +1,16 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class GameAudio : MonoBehaviour
 {
+
+
+    public Slider volume;
     public AudioSource musicSource;
 
-
-    public GameObject musicSlider;
 
     public AudioClip LevelSong1;
     public AudioClip LevelSong2;
@@ -26,6 +28,13 @@ public class GameAudio : MonoBehaviour
     AudioClip[] songList = new AudioClip[100];
 
     private bool shouldReplay = true;
+
+    private void Awake()
+    {
+        DontDestroyOnLoad(this.gameObject);
+    }
+
+
 
     // Start is called before the first frame update
     void Start()
@@ -45,7 +54,6 @@ public class GameAudio : MonoBehaviour
         songList[8] = LevelSong9;
         songList[9] = LevelSong10;
 
-        OnSceneLoaded(SceneManager.GetSceneByName("MainGame"), LoadSceneMode.Additive);
     }
 
     // Update is called once per frame
@@ -63,6 +71,8 @@ public class GameAudio : MonoBehaviour
             PlaySongList();
             shouldReplay = false;
         } 
+
+        musicSource.volume = volume.value;
     }
 
     public void PauseAudio()
@@ -121,6 +131,7 @@ public class GameAudio : MonoBehaviour
                 {
                     musicSource.clip = songList[i];
                     musicSource.Play();
+                    musicSource.Play();
                     new WaitForSeconds(musicSource.clip.length);
                 }
             }
@@ -128,10 +139,5 @@ public class GameAudio : MonoBehaviour
         }
 
         shouldReplay = true;
-    }
-
-    void OnSceneLoaded(Scene scene, LoadSceneMode mode)
-    {
-        musicSlider = GameObject.FindWithTag("slider");
     }
 }
