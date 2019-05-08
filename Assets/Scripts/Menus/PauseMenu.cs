@@ -44,16 +44,14 @@ public class PauseMenu : MonoBehaviour
 
     public void LoadMenu()
     {
+        SceneManager.LoadScene("MenuScene");
         Utilities.ResetSettings();
         Time.timeScale = 1f;
         IsPaused = false;
-        SceneManager.UnloadSceneAsync("AudioScene");
-        SceneManager.LoadScene("MenuScene");
     }
 
     public void QuitMenu()
     {
-        Debug.Log("QUIT");
         Application.Quit();
     }
 }
